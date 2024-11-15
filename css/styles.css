@@ -1,3 +1,56 @@
+/*Fonts
+Space mono Bold 700
+
+.space-mono-bold {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
+lexend deca regular
+
+.lexend-deca-<uniquifier> {
+  font-family: "Lexend Deca", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+*/
+
+:root {
+    /*colors*/
+    --yellow: #fcb72b;
+    --light-yellow: #fff4df;
+    --dark-navey:#333A44;
+    --navy: #495567;
+    --medium-grey: #939caa;
+    --light-grey: #e5ecf4;
+    --snow: #f2f5f9;
+
+     /*fonts*/
+    --space-mono: 'Space mono', monospace;
+    --lexend-deca: 'Lexend deca', 'sans-serif';
+
+    /*font-weight*/
+    --bold:700;
+    --regular:400;
+
+     /*font-size*/
+    --h1-mobile: 40px;
+    --h1-desktop:56px;
+    --text:15px;
+    --h2-mobile:32px;
+    --h2-desktop:48px;
+    --h3-mobile: 20px;
+    --h3-desktop:24px;
+
+    /*line-height*/
+    --line-height-m: 28px;
+    --line-height-l: 48px;
+    --line-height-xl: 56px;
+    }
+
 *{
     box-sizing: border-box;
 }
@@ -24,6 +77,100 @@ ul{
 }
 
 body{
-    font-family: sans-serif;
+    font-family: var(--lexend-deca);
     margin: 0;
+    width: 100%;
+
 }
+
+.header{
+    width: 375px;
+}
+
+.title{
+    font-family: var(--space-mono);
+    font-size: var(--h2-mobile);
+    color: var(--navy);
+}
+
+.title-small{
+    font-size: var(--h3-mobile);
+}
+
+.banner-title{
+    color: white;
+    font-size: var(--h1-mobile);
+    line-height: 40px;   
+}
+
+.banner{
+    height: 650px;
+    background-image:url(../assets/images/home-hero-mobile.jpg);
+    background-size: cover;
+    background-position-x: right;
+    background-repeat: no-repeat;
+    background-color: #4e7fc7;
+    padding-inline: 32px;
+    padding-top: 115px;
+    text-align: center;
+    position: relative;
+}
+
+.banner-arrow{
+    position: absolute;
+    top:478px;
+    left:240px;
+}
+
+@media screen and (width>786px) {
+    .banner{
+        background-image:url(../assets/images/home-hero-tablet.jpg);
+    }
+}
+
+@media screen and (width>1024px) {
+    .banner{
+        background-image:url(../assets/images/home-hero-desktop.jpg);
+    }
+}
+
+.text{
+   font-size: var(--text); 
+   color: var(--medium-grey);
+}
+
+.banner-text{
+    color: white;
+}
+
+.button{
+    font-family: var(--space-mono);
+    font-size: var(--text);
+    width:180px;
+    height: 53px;
+    background-color: var(--yellow);
+    border: none;
+    color: white;
+}
+
+.main{
+    padding-inline: 32px;
+}
+
+.section{
+    width: 311px;
+    text-align: center;
+}
+
+.icon{
+    width: 56px;
+    margin-inline: auto;
+}
+
+
+
+
+
+
+
+
