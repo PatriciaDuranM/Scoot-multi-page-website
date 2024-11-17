@@ -16,8 +16,10 @@
     <header class="header">
       <div class="header1">
         <div class="logo-burger">
-          <img src="assets/icons/hamburger.svg" alt="Menu" />
-          <img src="assets/logo.svg" alt="Scoot logo" />
+          <img class="burger" src="assets/icons/hamburger.svg" alt="Menu" />
+          <a href="index.html">
+            <img class="logomenu" src="assets/logo.svg" alt="Scoot logo" />
+          </a>
         </div>
         <nav class="nav">
           <ul>
@@ -30,7 +32,7 @@
             <a href="html/careers.html">Location</a>
           </ul>
           <ul>
-            <button class="button-nav">Get Scootin</button>
+            <button class="button button-nav">Get Scootin</button>
           </ul>
         </nav>
       </div>
@@ -49,7 +51,7 @@
         />
       </div>
     </header>
-    <main class="main">
+    <main class="main main-home">
       <section class="section section1">
         <div class="item-sec1 locate">
           <img class="icon" src="assets/icons/locate.svg" alt="Locate icon" />
@@ -81,10 +83,12 @@
       </section>
       <section class="section section2">
         <div class="item-sec2">
-          <img src=assets/patterns/left-downward-arrow.svg alt="" />
+          <img class="arrow1-sec2" src=assets/patterns/left-downward-arrow.svg
+          alt="" />
           <img
+            class="img-sec2"
             src="assets/images/telemetry.jpg"
-            alt="Gir looking at the phone"
+            alt="Girl looking at the phone"
           />
           <div class="info-sec2">
             <h2 class="title">Easy to use riding telemetry</h2>
@@ -98,8 +102,9 @@
           </div>
         </div>
         <div class="item-sec2">
-          <img src=assets/patterns/right-arrow.svg alt="" /> <img
-          src=assets/images/near-you.jpg alt="Gir looking at the phone" />
+          <img class="arrow2-sec2" src=assets/patterns/right-arrow.svg alt="" />
+          <img class="img-sec2" src=assets/images/near-you.jpg alt="Image of a
+          city" />
           <div class="info-sec2">
             <h2 class="title">Coming to a city near you</h2>
             <p class="text">
@@ -112,8 +117,9 @@
           </div>
         </div>
         <div class="item-sec2">
-          <img src=assets/patterns/left-downward-arrow.svg alt="" /> <img
-          src=assets/images/payments.jpg alt="Gir looking at the phone" />
+          <img class="arrow3-sec2" src=assets/patterns/left-downward-arrow.svg
+          alt="" /> <img class="img-sec2" src=assets/images/payments.jpg
+          alt="Someone getting money out of the wallet" />
           <div class="info-sec2">
             <h2 class="title">Zero hassle payments</h2>
             <p class="text">
@@ -126,31 +132,41 @@
           </div>
         </div>
       </section>
-      <section class="section section3">
-        <h2 class="title title-sec3">Sign up and Scoot off today</h2>
+    </main>
+    <footer class="footer">
+      <div class="footer-sec1">
+        <h2 class="title title-sec1-footer">Sign up and Scoot off today</h2>
         <div class="app-box">
           <img
+            class="app-ios"
             src="assets/icons/app-store.svg"
             alt="Available on the AppStore"
           />
-          <img src="assets/icons/google-play.svg" alt="Get it on GooglePlay" />
+          <img
+            class="app-android"
+            src="assets/icons/google-play.svg"
+            alt="Get it on GooglePlay"
+          />
         </div>
-      </section>
-    </main>
-    <footer class="footer">
-      <img src="assets/logo.svg" alt="Logo de Scoot" />
-      <div class="links-footer">
-        <a class="footer-options" href="html/about.html">About</a>
-        <a class="footer-options" href="html/locations.html">Location</a>
-        <a class="footer-options" href="html/careers.html">Careers</a>
       </div>
-      <div class="rrss">
-        <img src="assets/icons/facebook.svg" alt="Link al facebook de scoot" />
-        <img src="assets/icons/twitter.svg" alt="Link al twitter de scoot" />
-        <img
-          src="assets/icons/instagram.svg"
-          alt="Link al instagram de scoot"
-        />
+      <div class="footer-sec2">
+        <img class="logo-footer" src="assets/logo.svg" alt="Logo de Scoot" />
+        <div class="links-footer">
+          <a class="footer-options" href="html/about.html">About</a>
+          <a class="footer-options" href="html/locations.html">Location</a>
+          <a class="footer-options" href="html/careers.html">Careers</a>
+        </div>
+        <div class="rrss">
+          <img
+            src="assets/icons/facebook.svg"
+            alt="Link al facebook de scoot"
+          />
+          <img src="assets/icons/twitter.svg" alt="Link al twitter de scoot" />
+          <img
+            src="assets/icons/instagram.svg"
+            alt="Link al instagram de scoot"
+          />
+        </div>
       </div>
     </footer>
     <script src="js/scripts.js"></script>

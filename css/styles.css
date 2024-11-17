@@ -22,7 +22,7 @@ lexend deca regular
     /*colors*/
     --yellow: #fcb72b;
     --light-yellow: #fff4df;
-    --dark-navey:#333A44;
+    --dark-navy:#333A44;
     --navy: #495567;
     --medium-grey: #939caa;
     --light-grey: #e5ecf4;
@@ -79,28 +79,73 @@ ul{
 body{
     font-family: var(--lexend-deca);
     margin: 0;
-    width: 100%;
-
-}
-
-.header{
     width: 375px;
 }
 
+@media screen and (width>786px) {
+    body{
+        width: 786px;
+    }
+}
+
+@media screen and (width>1024px) {
+    body{
+        width: 100%;
+    }
+}
+
+.header1{
+    height: 64px;
+    padding-inline: 32px;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    display: flex;
+    position: relative;
+}
+
+.logo-burger{
+    display: flex;
+    flex-direction: row;
+}
+
+.burger{
+    margin-right: 97px;
+}
+
+.nav{
+    position: absolute;
+    top: 64px;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--dark-navy);
+    color: white;
+    width: 256px;
+    height: 650px;
+    z-index: 1;
+    padding-inline: 32px;
+    padding-top: 64px;
+    gap: 24px;
+    padding-bottom: 24px;
+    display: none;
+}
+
+.button-nav{
+    align-self: flex-end;
+}
+
 .title{
+    margin-bottom: 0px;
     font-family: var(--space-mono);
     font-size: var(--h2-mobile);
     color: var(--navy);
+    font-weight: var(--bold);
+    line-height: 32px;
+    letter-spacing: -1.43px;
 }
 
 .title-small{
     font-size: var(--h3-mobile);
-}
-
-.banner-title{
-    color: white;
-    font-size: var(--h1-mobile);
-    line-height: 40px;   
 }
 
 .banner{
@@ -114,12 +159,27 @@ body{
     padding-top: 115px;
     text-align: center;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
 }
+
+.banner-title{
+    color: white;
+    font-size: var(--h1-mobile);
+    line-height: 40px;
+    width: 311px;  
+    text-align: center; 
+    margin-top: 0px;
+    text-align: center;
+    margin-inline: auto;
+}
+
 
 .banner-arrow{
     position: absolute;
     top:478px;
-    left:240px;
+    left:-240px;
 }
 
 @media screen and (width>786px) {
@@ -134,9 +194,25 @@ body{
     }
 }
 
+.main{
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+    padding-top: 72px;
+    padding-inline: 32px;
+    padding-bottom: 120px;
+}
+
+.main-home{
+padding-top: 120px;
+}
+
 .text{
+    margin-top: 0px;
    font-size: var(--text); 
    color: var(--medium-grey);
+   line-height: 25px;
+   margin-bottom: 0px;
 }
 
 .banner-text{
@@ -151,14 +227,16 @@ body{
     background-color: var(--yellow);
     border: none;
     color: white;
-}
-
-.main{
-    padding-inline: 32px;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-inline: 27px;
+    margin-inline: auto;
 }
 
 .section{
-    width: 311px;
+    margin-top: 0px;
     text-align: center;
 }
 
@@ -167,7 +245,318 @@ body{
     margin-inline: auto;
 }
 
+.section2{
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+    margin-top: 0px;
+}
 
+.img-sec2{
+    width: 311px;
+    height: 311px;
+    border-radius: 50%;
+}
+
+.item-sec2{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+}
+
+.info-sec2{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    text-align: center;
+    margin-inline: auto;
+}
+
+.arrow1-sec2{
+    position: absolute;
+    top: 173px;
+    height: 137px;
+    width: 100%;
+}
+
+.arrow2-sec2{
+    position: absolute;
+    top: 0px;
+    right: 81px;
+}
+
+.arrow3-sec2{
+    position: absolute;
+    top: 0px;
+    left: 130px;
+}
+
+.section2{
+    margin-top: 120px;
+}
+
+.app-box{
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    width: 256px;
+    justify-content: space-between;
+}
+
+/*porque sale la letra en serifa?*/
+.app-ios{
+    width: 114px;
+    font-family: sans-serif;
+}
+
+.app-android{
+    width: 130px ;
+    font-family: sans-serif;
+}
+
+/*Footer*/
+.footer{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-sec1{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    background-color: var(--navy);
+    padding-inline:32px;
+    padding-top: 88px;
+    padding-bottom: 88px;
+    background-image:url(../assets/patterns/semi-circles.svg); 
+    background-repeat: no-repeat;
+}
+
+.title-sec1-footer{
+    color: white;
+    text-align: center;
+    letter-spacing: -1.43px;
+}
+
+.footer-sec2{
+    background-color: var(--dark-navy);
+    display: flex;
+    flex-direction: column;
+    padding-top: 64px;
+    padding-bottom: 88px;
+    padding-inline: 127px; 
+}
+
+.logo-footer{
+    width: 108px;
+    filter: brightness(100);
+}
+
+.links-footer{
+display: flex;
+flex-direction: column;
+margin-top: 41px;
+gap: 16px;
+}
+
+.footer-options{
+    color: var(--medium-grey);
+    font-size: var(--text);
+    font-family: var(--space-mono);
+    text-align: center;
+}
+
+.rrss{
+    display: flex;
+    gap: 16px;
+    margin-top: 85px;
+}
+
+/*About*/
+
+.banner2{
+    width: 375px;
+    height: 160px;
+    padding-top: 60px;
+}
+
+.banner-about {
+    background-image: url(../assets/images/about-hero-mobile.jpg);
+}
+
+/*About*/
+.section5{
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    text-align: center;
+}
+
+.sec5-item{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    text-align: center;
+}
+
+.acordion-box{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: start;
+}
+
+.acordion-item{
+    width: 311px;
+    background-color: var(--snow);
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.acordion-title{
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+    justify-content: space-between;
+}
+
+.acordion-text{
+    padding: 0px;
+    max-height: 0px;
+    overflow: hidden;
+    pointer-events: none;
+    transition: all 0.5s ease;
+}
+
+.acordion-show{
+    max-height: 400px;
+}
+
+/*Careers*/
+
+.banner-careers{
+    background-image: url(../assets/images/careers-location-hero-mobile.jpg);
+}
+
+.title-sec3{
+  padding-bottom: 64px;
+}
+.sec3-item{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.imgs-sec3{
+    display: flex;
+    flex-direction: column;
+    margin-inline: auto;
+    height: 288px;
+    position: relative;
+}
+
+.img-sec3{
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    margin-inline: auto;
+}
+
+.sec3-number{
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    background-color: var(--yellow);
+    font-size: 24px;
+    font-weight: var(--bold);
+    margin-inline: auto;
+    z-index: 1;
+    position: absolute;
+    bottom: 0px;
+    left: 72px;
+    padding: 34px;
+}
+
+.info-sec3{
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+}
+
+.titleinfo-sec3{
+    font-size: 24px;
+    font-family: var(--space-mono);
+    font-weight: var(--bold);
+    line-height: 28px;
+    letter-spacing: -1.07px;
+}
+
+.section4{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.sec4-item{
+    display: flex;
+    flex-direction: column;
+    gap:16px;
+    width: 311px;
+    padding: 32px;
+    background-color: var(--snow);
+}
+
+.position{
+    display: flex;
+    flex-direction: column;
+    margin-inline: auto;
+    text-align: center;
+}
+
+.title-position{
+    font-size: 18px;
+}
+
+/*Location*/
+
+.banner-location{
+    background-image: url(../assets/images/careers-location-hero-mobile.jpg);
+}
+
+.main-location{
+    padding-bottom: 72px;
+}
+
+.map{
+    margin-bottom: 40px;
+}
+
+.cities{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.city{
+    width: 311px;
+    height: 72px;
+    background-color: var(--light-yellow);
+    padding-top: 22px;
+    padding-bottom: 22px;
+    text-align: center;
+    font-size: 24px;
+    font-family: var(--space-mono);
+    color: var(--navy);
+    font-weight: var(--bold);
+}
+
+.button-location{
+    margin-inline: auto;
+}
 
 
 
