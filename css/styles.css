@@ -94,6 +94,8 @@ body{
     .header1{
        height: 96px;
        padding-inline: 40px;
+       padding-top: 22px;
+       align-items: center;
     }
 }
 
@@ -147,8 +149,7 @@ body{
     .nav{
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
-        gap: 32px;
+        justify-content: space-between;
         width: 100%;
         height: 96px;
         translate: 0;
@@ -158,6 +159,14 @@ body{
         padding-right: 40px;
         position: absolute;
         top: 0px;
+    }
+
+    .options{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 32px;
+        width: 249px;
     }
 }
 
@@ -171,9 +180,10 @@ body{
 @media screen and (width>786px){
     .menu-option{
         color: var(--medium-grey);
-        padding-top: 8px;
+        margin-top: 12px;
     }
 }
+
 
 .button{
     font-family: var(--space-mono);
@@ -189,6 +199,7 @@ body{
     padding-bottom: 14px;
     padding-inline: 27px;
     margin-inline: auto;
+    z-index: 1;
 }
 
 .menu-option-last{
@@ -198,8 +209,14 @@ body{
 @media screen and (width>786px){
     .menu-option-last{
         margin-top: 0px;
-        
+        margin-left: 94px;
     }
+}
+
+@media screen and (width>1024px){
+    .menu-option-last{
+        margin-right: 0%;
+}
 }
 
 .button-nav{
@@ -236,8 +253,9 @@ body{
     color: var(--navy);
     font-weight: var(--bold);
 }
+
 @media screen and (width>786px){
-    .title-smal{
+    .title-small{
         text-align: start;
         line-height: 28px;
     }
@@ -263,8 +281,34 @@ body{
     .banner{
         padding-inline: 97px;
         padding-top: 137px;
+        background-image: url(../assets/images/home-hero-tablet.jpg);
+    }
+
+    .banner::after{
+        content: '';
+        position: absolute;
+        width: 234px;
+        height: 63px;
+        background-image: url(../assets/patterns/white-circles.svg);
+        top: 565px;
+        left: 595px;
     }
 }
+
+@media screen and (width>1024px){
+    .banner{
+        background-image: url(../assets/images/home-hero-desktop.jpg);
+        padding-block: 152px;
+        padding-left: 165px;
+        padding-right: 775px;
+        gap:40px;
+    }
+    
+    .banner::after{
+        left: 1024px;
+    }
+}
+
 
 .banner-title{
     font-family: var(--space-mono);
@@ -284,22 +328,40 @@ body{
     }
 }
 
+@media screen and (width>1024px){
+    .banner-title{
+        width: 500px;
+        text-align: start;
+    }
+}
+
 @media screen and (width>786px){
     .banner-title2{
         text-align: start;
     }
 }
 
-
 .banner-arrow{
     position: absolute;
     top:478px;
     left:-240px;
+    z-index: 0;
 }
 
 @media screen and (width>786px) {
     .banner{
         background-image:url(../assets/images/home-hero-tablet.jpg);
+    }
+
+    .banner-arrow{
+        left: -110px;
+    }
+}
+
+@media screen and (width>1024px) {
+    .banner-arrow{
+        top: 465px;
+        left: 500px;
     }
 }
 
@@ -342,6 +404,14 @@ padding-top: 120px;
     color: white;
 }
 
+@media screen and (width>1024px) {
+    .banner-text{
+        margin-left: 95px;
+        width: 405px;
+        text-align: start;
+    }
+}
+
 .icon-sec1{
     width: 56px;
     margin-inline: auto;
@@ -353,11 +423,50 @@ padding-top: 120px;
     }
 }
 
+@media screen and (width>1024px) {
+    .icon-sec1{
+        margin-left: 0px;
+    }
+}
+
 .section1{
     display: flex;
     flex-direction: column;
     gap: 48px;
     text-align: center;
+    position: relative;
+}
+
+@media screen and (width>786px) {
+    .section1::after{
+        content: '';
+        position: absolute;
+        width: 15px;
+        height: 530px;
+        background-color: var(--light-grey);
+        z-index: -1;
+        left: 40px; 
+        top: -120px;
+    }
+}
+
+
+
+@media screen and (width>1024px) {
+    .section1{
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .section1::after{
+        width: 974px;
+        height: 15px;
+        background-color: var(--light-grey);
+        z-index: -1;
+        top: 40px;
+        left: -120px;
+    }
+
 }
 
 .item-sec1{
@@ -376,6 +485,14 @@ padding-top: 120px;
     }
 }
 
+@media screen and (width>1024px) {
+    .item-sec1{
+        flex-direction: column;
+        justify-content: start;
+        gap: 40px;
+    }
+}
+
 @media screen and (width>786px) {
     .item-sec1-info{
         display: flex;
@@ -384,6 +501,13 @@ padding-top: 120px;
         text-align: start;
     }
 }
+
+@media screen and (width>1024px) {
+    .item-sec1-info{
+        width: 350px; 
+    }
+}
+
 
 .section2{
     margin-top: 0px;
@@ -399,10 +523,22 @@ padding-top: 120px;
 }
 }
 
+.images-sec2{
+    position: relative;
+}
+
 .img-sec2{
     width: 311px;
     height: 311px;
     border-radius: 50%;
+}
+
+.img-sec2-circle1{
+    display: none;
+}
+
+.img-sec2-circle2{
+    display: none;
 }
 
 @media screen and (width>786px) {
@@ -411,9 +547,25 @@ padding-top: 120px;
         height: 445px;
         border-radius: 50%;
        margin-inline: auto;
-}
-}
+    }
 
+    .img-sec2-circle1{
+        display: block;
+        position: absolute;
+        top: 0px;
+        left: 650px;
+        z-index: -1;
+        
+    }
+
+    .img-sec2-circle2{
+        display: block;
+        position: absolute;
+        top: 0px;
+        left: -370px;
+        z-index: -1;
+    }
+}
 
 .item-sec2{
     position: relative;
@@ -491,12 +643,16 @@ padding-top: 120px;
     padding-bottom: 88px;
     background-image:url(../assets/patterns/semi-circles.svg); 
     background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-position-x:left;
 }
 
 @media screen and (width>786px) {
     .footer-sec1{
         padding-inline:156px;
         padding-block: 62px;
+        background-position-x:center;
+        background-position-y: bottom;
 }
 }
 
