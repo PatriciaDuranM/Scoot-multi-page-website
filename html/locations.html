@@ -16,44 +16,64 @@
     <header class="header">
       <div class="header1">
         <div class="logo-burger">
-          <img class="burger" src="../assets/icons/hamburger.svg" alt="Menu" />
+          <img
+            id="burger"
+            class="burger"
+            src="../assets/icons/hamburger.svg"
+            alt="Menu"
+          />
           <a href="../index.html">
             <img class="logomenu" src="../assets/logo.svg" alt="Scoot logo" />
           </a>
         </div>
-        <nav class="nav">
-          <ul>
-            <a href="html/about.html">About</a>
-          </ul>
-          <ul>
-            <a href="html/locations.html">Careers</a>
-          </ul>
-          <ul>
-            <a href="html/careers.html">Location</a>
-          </ul>
-          <ul>
-            <button class="button button-nav">Get Scootin</button>
+        <nav>
+          <ul id="menu" class="nav">
+            <li class="menu-option"><a href="../html/about.html">About</a></li>
+            <li class="menu-option">
+              <a href="../html/careers.html ">Careers</a>
+            </li>
+            <li class="menu-option">
+              <a href="../html/locations.html">Location</a>
+            </li>
+            <li class="menu-option-last">
+              <button class="button button-nav">Get Scootin</button>
+            </li>
           </ul>
         </nav>
       </div>
-      <div class="banner2 banner-location">
-        <h1 class="title banner-title">Locations</h1>
+      <div class="banner2 banner-careers">
+        <h1 class="banner-title2 banner-title">Locations</h1>
       </div>
     </header>
 
     <main class="main main-location">
-      <img
-        class="map"
-        src="../assets/images/world-map-mobile.png"
-        alt="World map with the locations of scoot pinned"
-      />
-      <div class="cities">
-        <span class="city">New York</span>
-        <span class="city">London</span>
-        <span class="city">Jakarta</span>
-        <span class="city">Yokohama</span>
+      <div class="map">
+        <picture>
+          <source
+            media="(min-width:1024px)"
+            srcset="../assets/images/world-map-desktop.png"
+          />
+          <source
+            media="(min-width:786px)"
+            srcset="../assets/images/world-map-tablet.png"
+          />
+          <source
+            media="(min-width:360px)"
+            srcset="../assets/images/world-map-mobile.png"
+          />
+          <img
+            srcset="../assets/images/world-map-mobile.png"
+            alt="World map with the locations of scoot pinned"
+          />
+        </picture>
+        <div class="cities">
+          <span class="city newyork">New York</span>
+          <span class="city london">London</span>
+          <span class="city jakarta">Jakarta</span>
+          <span class="city yokohama">Yokohama</span>
+        </div>
       </div>
-      <div class="info-sec2">
+      <div class="info-sec2 info-cities">
         <h2 class="title">Your City Not Listed?</h2>
         <p class="text">
           If you’d like to see Scoot in your hometown, be sure to let us know.

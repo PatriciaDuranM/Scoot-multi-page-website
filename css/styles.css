@@ -77,21 +77,8 @@ ul{
 }
 
 body{
-    font-family: var(--lexend-deca);
+    font-family: var(--lexend-deca), sans-serif;
     margin: 0;
-    width: 375px;
-}
-
-@media screen and (width>786px) {
-    body{
-        width: 786px;
-    }
-}
-
-@media screen and (width>1024px) {
-    body{
-        width: 100%;
-    }
 }
 
 .header1{
@@ -103,6 +90,13 @@ body{
     position: relative;
 }
 
+@media screen and (width>786px){
+    .header1{
+       height: 96px;
+       padding-inline: 40px;
+    }
+}
+
 .logo-burger{
     display: flex;
     flex-direction: row;
@@ -112,26 +106,108 @@ body{
     margin-right: 97px;
 }
 
+@media screen and (width>786px){
+    .burger{
+        display: none;
+    }
+}
+
+.logomenu{
+    width: 75px;
+}
+
+@media screen and (width>786px){
+    .logomenu{
+        width: 108px;
+        position: relative;
+        z-index: 10;
+    }
+}
+
 .nav{
     position: absolute;
     top: 64px;
     left: 0px;
     display: flex;
     flex-direction: column;
+    gap: 24px;
     background-color: var(--dark-navy);
     color: white;
     width: 256px;
-    height: 650px;
+    height: calc(100vh - 64px);
     z-index: 1;
     padding-inline: 32px;
     padding-top: 64px;
-    gap: 24px;
     padding-bottom: 24px;
-    display: none;
+    translate:-100%;
+    transition: translate 0.3s;
+}
+
+@media screen and (width>786px){
+    .nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 32px;
+        width: 100%;
+        height: 96px;
+        translate: 0;
+        background-color: transparent;
+        padding-top: 21px;
+        padding-left: 205px;
+        padding-right: 40px;
+        position: absolute;
+        top: 0px;
+    }
+}
+
+.menu-option{
+    font-size: 18px;
+    font-family: var(--space-mono);
+    color: white;
+    font-weight: var(--bold);
+}
+
+@media screen and (width>786px){
+    .menu-option{
+        color: var(--medium-grey);
+        padding-top: 8px;
+    }
+}
+
+.button{
+    font-family: var(--space-mono);
+    font-size: var(--text);
+    width:180px;
+    height: 53px;
+    background-color: var(--yellow);
+    border: none;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-inline: 27px;
+    margin-inline: auto;
+}
+
+.menu-option-last{
+    margin-top: auto;
+}
+
+@media screen and (width>786px){
+    .menu-option-last{
+        margin-top: 0px;
+        
+    }
 }
 
 .button-nav{
-    align-self: flex-end;
+    width: 192px;
+}
+
+.menu-show{
+    translate:0;
 }
 
 .title{
@@ -144,8 +220,27 @@ body{
     letter-spacing: -1.43px;
 }
 
+@media screen and (width>786px){
+    .title{
+        font-size: var(--h2-desktop);
+        line-height: 48px;
+        letter-spacing: -2.14px;
+        width: 457px;
+        text-align: center;
+    }
+}
+
 .title-small{
     font-size: var(--h3-mobile);
+    font-family: var(--space-mono);
+    color: var(--navy);
+    font-weight: var(--bold);
+}
+@media screen and (width>786px){
+    .title-smal{
+        text-align: start;
+        line-height: 28px;
+    }
 }
 
 .banner{
@@ -164,15 +259,35 @@ body{
     gap: 32px;
 }
 
+@media screen and (width>786px){
+    .banner{
+        padding-inline: 97px;
+        padding-top: 137px;
+    }
+}
+
 .banner-title{
+    font-family: var(--space-mono);
     color: white;
     font-size: var(--h1-mobile);
     line-height: 40px;
-    width: 311px;  
     text-align: center; 
     margin-top: 0px;
-    text-align: center;
     margin-inline: auto;
+}
+
+@media screen and (width>786px){
+    .banner-title{
+        font-size: var(--h1-desktop);
+        line-height: 56px;
+        letter-spacing: -2.5px;
+    }
+}
+
+@media screen and (width>786px){
+    .banner-title2{
+        text-align: start;
+    }
 }
 
 
@@ -203,6 +318,13 @@ body{
     padding-bottom: 120px;
 }
 
+@media screen and (width>786px) {
+    .main{
+        padding-inline: 40px;
+    }
+}
+
+
 .main-home{
 padding-top: 120px;
 }
@@ -213,31 +335,22 @@ padding-top: 120px;
    color: var(--medium-grey);
    line-height: 25px;
    margin-bottom: 0px;
+   font-weight: var(--regular);
 }
 
 .banner-text{
     color: white;
 }
 
-.button{
-    font-family: var(--space-mono);
-    font-size: var(--text);
-    width:180px;
-    height: 53px;
-    background-color: var(--yellow);
-    border: none;
-    color: white;
-    font-weight: 700;
-    text-align: center;
-    padding-top: 14px;
-    padding-bottom: 14px;
-    padding-inline: 27px;
+.icon-sec1{
+    width: 56px;
     margin-inline: auto;
 }
 
-.icon{
-    width: 56px;
-    margin-inline: auto;
+@media screen and (width>786px) {
+    .icon-sec1{
+        width: 96px;
+    }
 }
 
 .section1{
@@ -253,6 +366,25 @@ padding-top: 120px;
     gap: 24px;
 }
 
+@media screen and (width>786px) {
+    .item-sec1{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 79px;
+        width: 573px;
+    }
+}
+
+@media screen and (width>786px) {
+    .item-sec1-info{
+        display: flex;
+        flex-direction: column;
+        width: 398px;
+        text-align: start;
+    }
+}
+
 .section2{
     margin-top: 0px;
     display: flex;
@@ -261,11 +393,27 @@ padding-top: 120px;
     margin-top: 0px;
 }
 
+@media screen and (width>786px) {
+    .section2{
+        gap: 128px;
+}
+}
+
 .img-sec2{
     width: 311px;
     height: 311px;
     border-radius: 50%;
 }
+
+@media screen and (width>786px) {
+    .img-sec2{
+        width: 445px;
+        height: 445px;
+        border-radius: 50%;
+       margin-inline: auto;
+}
+}
+
 
 .item-sec2{
     position: relative;
@@ -277,16 +425,23 @@ padding-top: 120px;
 .info-sec2{
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 32px;
     text-align: center;
     margin-inline: auto;
 }
 
+@media screen and (width>786px) {
+    .info-sec2{
+        gap: 40px;
+        margin-inline: auto;
+        align-items: center;
+}
+}
+
 .arrow1-sec2{
     position: absolute;
     top: 173px;
-    height: 137px;
-    width: 100%;
 }
 
 .arrow2-sec2{
@@ -338,6 +493,13 @@ padding-top: 120px;
     background-repeat: no-repeat;
 }
 
+@media screen and (width>786px) {
+    .footer-sec1{
+        padding-inline:156px;
+        padding-block: 62px;
+}
+}
+
 .title-sec1-footer{
     color: white;
     text-align: center;
@@ -353,6 +515,15 @@ padding-top: 120px;
     padding-inline: 127px; 
 }
 
+@media screen and (width>786px) {
+    .footer-sec2{
+        flex-direction: row;
+        align-items: center;
+        padding-inline: 40px;
+        padding-block: 32px;
+}
+}
+
 .logo-footer{
     width: 108px;
     filter: brightness(100);
@@ -364,6 +535,18 @@ flex-direction: column;
 margin-top: 41px;
 gap: 16px;
 }
+
+@media screen and (width>786px) {
+    .links-footer{
+        flex-direction: row;
+        align-items: center;
+        margin-top: 0px;
+        gap: 32px;
+        margin-left: 58px;
+        margin-right: 153px;
+    }
+}
+
 
 .footer-options{
     color: var(--medium-grey);
@@ -378,29 +561,78 @@ gap: 16px;
     margin-top: 85px;
 }
 
+@media screen and (width>786px) {
+    .rrss{
+        margin-top: 0px;
+    }
+}
+
 /*About*/
 
 .banner2{
-    width: 375px;
+    width: 100%;
     height: 160px;
     padding-top: 60px;
 }
 
-.banner-about {
+@media screen and (width>786px) {
+    .banner2{
+    height: 200px;
+    padding-block: 72px;
+    position: relative;
+    padding-left: 97px;
+    text-align: start;
+}
+}
+
+@media screen and (width>786px) {
+    .banner2::after{
+        content: '';
+        width: 234px;
+        height: 63px;
+        background-image:url(../assets/patterns/white-circles.svg);
+        position: absolute;
+        top: 68px;
+        right: -32px;
+    }
+}
+
+.banner-about{
     background-image: url(../assets/images/about-hero-mobile.jpg);
 }
 
-/*About*/
+@media screen and (width>786px) {
+    .banner-about{
+        background-image:url(../assets/images/about-hero-tablet.jpg);
+    }
+}
+
+
 .section5{
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 48px;
     text-align: center;
 }
 
+@media screen and (width>786px) {
+    .section5{
+        gap: 64px;
+    }
+}
+
+@media screen and (width>786px) {
+    .title-sec5{
+        font-size: var(--h1-mobile);
+    }
+}
+
+
 .sec5-item{
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 32px;
     text-align: center;
 }
@@ -418,7 +650,17 @@ gap: 16px;
     padding: 32px;
     display: flex;
     flex-direction: column;
-    
+}
+
+@media screen and (width>786px) {
+    .acordion-item{
+        width: 689px;
+        padding-left: 40px;
+        padding-right: 32px;
+        padding-top: 32px;
+        padding-bottom: 32px;
+        gap: 24px;
+    }
 }
 
 .acordion-title{
@@ -426,6 +668,17 @@ gap: 16px;
     align-items: center;
     pointer-events: none;
     justify-content: space-between;
+}
+
+.title-position{
+    font-size: 18px;
+}
+
+@media screen and (width>786px) {
+    .title-position{
+        font-size: var(--h3-desktop);
+        text-align: start;
+    }
 }
 
 .acordion-text{
@@ -446,9 +699,34 @@ gap: 16px;
     background-image: url(../assets/images/careers-location-hero-mobile.jpg);
 }
 
+@media screen and (width>786px) {
+    .banner-careers{
+        background-image: url(../assets/images/careers-locations-hero-tablet.jpg);
+    }
+}
+
+@media screen and (width>1024px) {
+    .banner-careers{
+        background-image: url(../assets/images/careers-locations-hero-desktop.jpg);
+    }
+}
+
+
+
 .title-sec3{
   padding-bottom: 64px;
 }
+
+@media screen and (width>786px) {
+    .section3{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 55px;
+        text-align: center;
+    }
+}
+
 .sec3-item{
     display: flex;
     flex-direction: column;
@@ -474,6 +752,9 @@ gap: 16px;
     width: 96px;
     height: 96px;
     border-radius: 50%;
+    font-family: var(--space-mono);
+    color: var(--navy);
+    line-height: 28px;
     background-color: var(--yellow);
     font-size: 24px;
     font-weight: var(--bold);
@@ -491,6 +772,12 @@ gap: 16px;
     gap: 27px;
 }
 
+@media screen and (width>786px) {
+    .info-sec3{
+        width: 457px;
+    }
+}
+
 .titleinfo-sec3{
     font-size: 24px;
     font-family: var(--space-mono);
@@ -499,19 +786,37 @@ gap: 16px;
     letter-spacing: -1.07px;
 }
 
+@media screen and (width>786px) {
+    .titleinfo-sec3{
+        font-size: var(--h3-desktop);
+    }
+}
+
+
 .section4{
     display: flex;
     flex-direction: column;
     gap: 16px;
+    width: 100%;
 }
 
 .sec4-item{
     display: flex;
     flex-direction: column;
     gap:16px;
-    width: 311px;
     padding: 32px;
     background-color: var(--snow);
+}
+
+@media screen and (width>786px) {
+    .sec4-item{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding-inline: 48px;
+        padding-block: 34px;
+        gap: 208px;
+    }
 }
 
 .position{
@@ -521,24 +826,54 @@ gap: 16px;
     text-align: center;
 }
 
-.title-position{
-    font-size: 18px;
+@media screen and (width>786px) {
+    .position{
+        width: 205px;
+        text-align: start;
+        margin: 0px;
+    }
 }
 
 /*Location*/
 
-.banner-location{
-    background-image: url(../assets/images/careers-location-hero-mobile.jpg);
-}
-
 .main-location{
     padding-bottom: 72px;
+    position: relative;
+}
+
+@media screen and (width>786px) {
+    .main-location{
+        padding-top: 144px;
+        padding-bottom: 120px;
+        padding-inline: 40px;
+        position: relative;
+    }
+}
+
+.map{
+    position: relative;
+}
+
+@media screen and (width>786px) {
+    .info-cities{
+        width: 573px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+}
 }
 
 .cities{
     display: flex;
     flex-direction: column;
     gap: 16px;
+}
+
+@media screen and (width>786px) {
+    .cities{
+        top: 0px;
+        position: absolute;
+}
 }
 
 .city{
@@ -554,12 +889,53 @@ gap: 16px;
     font-weight: var(--bold);
 }
 
-.button-location{
-    margin-inline: auto;
+@media screen and (width>786px) {
+    .city{
+        position: relative;
+        width: 120px;
+        height: 32px;
+        background-color: var(--yellow);
+        font-size: 13px;
+        line-height: 28px;
+        padding-block: 0px;
+}
+    .city::after{
+        content: '';
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        background-color: var(--yellow);
+        top: 24px;
+        left: 54px;
+        rotate: 45deg;
+    }
+
+    .newyork{
+        position: absolute;
+        left: 100px;
+        top: 50px;
+
+    }
+    .london{
+        position: absolute;
+        left: 240px;
+        top: 20px;
+    }
+    .jakarta{
+        position: absolute;
+        left: 480px;
+        top: 165px;
+
+    }
+    .yokohama{
+        position: absolute;
+        left: 530px;
+        top: 60px;
+    }
 }
 
 
-
-
-
+.button-location{
+    margin-inline: auto;
+}
 
